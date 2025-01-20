@@ -1,4 +1,4 @@
-/*!   
+/*!
  * Template Name: Developer - Portfolio Landing Page Template for Developers
  * Version: 2.5
  * Author: Xiaoying Riley
@@ -26,13 +26,13 @@ h6 {
   color: #ffffff;
 }
 
-a {
+/* a {
   color: pink;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
-}
+} */
 
  .btn, a.btn {
   -webkit-transition: all 0.4s ease-in-out;
@@ -81,8 +81,8 @@ a.btn-cta-secondary:hover, a.btn-cta-secondary:not(:disabled):not(.disabled):act
   background: #484848;
   border: 1px solid white;
   color: #fff;
-} 
-/* 
+}
+/*
 .text-highlight {
   color: pink;
 } */
@@ -298,6 +298,7 @@ a[aria-expanded="true"] {
 
 .section .section-inner {
   padding: 30px;
+  /* max-width: 200px;; */
 }
 
 .section .heading {
@@ -313,13 +314,12 @@ a[aria-expanded="true"] {
   font-size: 16px;
 }
 
-#music .content a {
-  color: pink;
-  font-size: 16px;
-}
-
 #hobbies .content a:hover {
   color: pink;
+}
+
+#hobbies .content .summary {
+  font-size: 16px;
 }
 
 .section .content .more-link .svg-inline--fa {
@@ -361,29 +361,7 @@ a[aria-expanded="true"] {
   color: pink;
 }
 
-/* Skills Section */
-.skills .item {
-  margin-bottom: 30px;
-}
 
-.skills .item .title {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 5px;
-  line-height: 1.5;
-}
-
-.skills .item .summary {
-  font-size: 16px;
-}
-
-.skills .item .title, a {
-  color: #778492;
-}
-
-.skills .item .title a:hover{
-  color: pink;
-}
 /* Work Section */
 .experience .item {
   margin-bottom: 30px;
@@ -407,38 +385,17 @@ a[aria-expanded="true"] {
   font-weight: normal;
 }
 
-.experience .item li {
+.experience .item details {
   color: #999;
   font-weight: normal;
   font-size: 20px;
 }
 
-/* Git section */
-/* .github-graph {
-  margin-bottom: 30px;
-}
-
-.github-graph .js-calendar-graph-svg {
-  max-width: 100%;
-}
-
-.github-graph h2 {
+.experience .item li {
+  color: #999;
+  font-weight: normal;
   font-size: 18px;
 }
-
-.ghfeed {
-  height: 500px;
-}
-
-.ghfeed,
-.ghfeed *,
-.ghfeed *:before,
-.ghfeed *:after {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-} */
-
 /* Info Section */
 .info .svg-inline--fa {
   margin-right: 15px;
@@ -447,6 +404,14 @@ a[aria-expanded="true"] {
 
 .info .svg-inline--fa.fa-envelope-o {
   font-size: 14px;
+}
+
+.info .heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 26px;
+  text-transform: uppercase;
 }
 
 .info ul {
@@ -481,6 +446,10 @@ a[aria-expanded="true"] {
   position: relative;
   margin-top: 0;
   margin-bottom: 10;
+}
+
+.skills .item .title, a {
+  color: #778492;
 }
 
 .skills .skillset .level-title .level-label {
@@ -556,86 +525,4 @@ a[aria-expanded="true"] {
 .aside .subheading {
   font-size: 18px;
   color: #545e69;
-}
-
-@media (max-width: 767.98px) {
-  .header {
-    text-align: center;
-  }
-  .header .profile-image {
-    float: none !important;
-    margin: 0 auto;
-  }
-  .header .profile-content {
-    float: none !important;
-    text-align: center;
-  }
-  .header .btn {
-    margin-top: 30px;
-    float: none !important;
-  }
-  .project-image {
-    margin-bottom: 15px;
-  }
-
-  .main-content {
-    margin-left: 0px;
-  }
-
-  .sidebar {
-    opacity: 0;
-    z-index: 9999;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .overlay {
-    display: none;
-    position: fixed;
-    /* full screen */
-    width: 100vw;
-    height: 100vh;
-    /* transparent black */
-    background: rgba(0, 0, 0, 0.7);
-    /* middle layer, i.e. appears below the sidebar */
-    z-index: 998;
-    /* animate the transition */
-    transition: all 0.5s ease-in-out;
-  }
-
-  .sidebar.active {
-    opacity: 1;
-  }
-
-  #sideBarButton{
-    margin-bottom: 25px;
-    margin-left: 10px;
-    background-color: pink;
-    border: none;
-  }
-
-  #dismiss {
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    /* top right corner of the sidebar */
-    top: 10px;
-    right: 10px;
-}
-}
-
-@media (min-width: 767.98px) {
-  #dismiss {
-    display: none;
-  }
-
-  #sideBarButton {
-    display:none;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    width: 1360px;
-    max-width: inherit;
-  }
 }
